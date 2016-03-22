@@ -1,5 +1,4 @@
 # Theory-of-Algorithms-Project-2016
-Anagrams 
 
 ### Vytas Vaiciulis
 #### G00304571
