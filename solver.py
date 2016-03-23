@@ -6,17 +6,23 @@
 import random as rn
 
 # This preprocessing function loads the words list file into a Python list.
-def preprocessing(fname):
-	with open(fname) as f:
-		content = f.readlines()
-	return [content]
-  
-  
-preprocessing("wordlist.txt")
-  
+
+content = []
+#def preprocessing(fname):
+with open("wordlist.txt") as f:
+	content = f.readlines()
+	#return [content]
+	
 print("Hi")
 
-print(preprocessing("wordlist.txt"))
+#print(content)
+print(content[2])
+
+  
+  
+#preprocessing("wordlist.txt")
+  
+
   
 # This is the function that actually checks the random letters for words.
 def check(letters):
