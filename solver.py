@@ -10,15 +10,16 @@ angramWords = []
 words = []
 
 with open("wordlist.txt") as f:
-	dictionary = f.readlines()
+	#dictionary = f.readlines()
+	dictionary = [line.strip() for line in f]
 	
 
 print(dictionary[2])
 
 
-for x in dictionary:   
-	x = x.strip()
-	words.append(x)
+#for x in dictionary:   
+	#x = x.strip()
+	#words.append(x)
   
   
 # gopup
@@ -51,7 +52,7 @@ print(angramWords)
 
 for anagram in angramWords:
 	#print("Outer " + anagram)
-	for word in words:
+	for word in dictionary:
 		#print("Dictionary " + word)
 		if anagram == word:
 			print("Inner " + word)
