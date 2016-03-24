@@ -5,13 +5,20 @@
 
 import random as rn
 
-content = []
+dictionary = []
+angramWords = []
+words = []
 
 with open("wordlist.txt") as f:
-	content = f.readlines()
+	dictionary = f.readlines()
 	
-print(content[2])
 
+print(dictionary[2])
+
+
+for x in dictionary:   
+	x = x.strip()
+	words.append(x)
   
   
 # gopup
@@ -19,43 +26,49 @@ print(content[2])
 #Go Pup
 #Pug Op
   
+def anagrams(letters):
+  if len(letters) <=1:
+    return letters
+  else:
+    anagramlist = []
+    for anagram in anagrams(letters[1:]):
+      for i in range(len(letters)):
+        anagramlist.append(anagram[:i] + letters[0:1] + anagram[i:])
+    return anagramlist
+
+word = "gald"
+i = 0
+
+#print("The anagrams of %s are:" % word)
+
+
+
+
+angramWords = anagrams(word)
+print(angramWords)
+
+
+
+for anagram in angramWords:
+	#print("Outer " + anagram)
+	for word in words:
+		#print("Dictionary " + word)
+		if anagram == word:
+			print("Inner " + word)
+	
+			
+print("Over")
+
+#print(angramWords[2])
+#print(dictionary[2])
+
+
+
+
+
 
   
-# Taken almost verbatim from: http://www.quickperm.org/
-def anagrams(word):
-  p = list(range(len(word) + 1))
-  i = 1
-  # Word has to be mutable.
-  word = list(word)
-  
-  while i < len(word):
-    p[i] = p[i] - 1
-    
-    if i % 2 == 1:
-      j = p[i]
-    else:
-      j = 0
-    
-    word[i], word[j] = word[j], word[i]
-    
-    i = 1
-    while p[i] == 0:
-      p[i] = i
-      i = i + 1
-    
-    yield "".join(word)
 
-    
-word = "abcd"
-i = 1
-
-print("The anagrams of %s are:" % word)
-print(word)
-for anagram in anagrams(word):
-  i = i + 1
-  print(anagram)
-
-print("There are %d anagrams in total." % i)
 
 # This function is just a wrapper that shows how my script works.
 # It does the preprocessing, then creates a random list of letters, and finally runs the solver.
