@@ -13,8 +13,10 @@
 
 mapDctionary = dict()
 mapFilter = dict()
+mapFilter = dict()
 asciiValueInt = 0
 asciiValueConcat = 0
+finalResult = []
 
 
 with open("wordlist.txt") as f:
@@ -34,7 +36,7 @@ for word in dictionary:
 	
 
 def proccesWord():
-	word = "auctioned"
+	word = "chaoatiricatrezn"
 	asciiValueInt = (sum(ord(ch) for ch in word))
 	sortword = sorted(word)
 	asciiConcat = [str(ord(ch)) for ch in sortword]
@@ -58,20 +60,33 @@ def	checAnagrams():
 			ascii = [str(ord(ch)) for ch in sortword] 
 			asciiJoined = "".join(ascii)
 			mapFilter.update({word:int(asciiJoined)})
-			for word, count in mapFilter.items():
-				if count == asciiValueConcat:
-					print(word)
-			
-			
-		#sortword = sorted(word)
+	return mapFilter
+	
+	
+mapFilter = checAnagrams()
+print(mapFilter)	
+
+def	checAnagrams():	
+	for word, count in mapFilter.items():
+		if count == asciiValueConcat:
+			print(word)
+	
 checAnagrams()
+
+
+
+				
+		#sortword = sorted(word)
+
 		
 #956 auctioned ,education
 
 #print("Over")
 
 
-
+# for word, count in mapFilter.items():
+				# if count == asciiValueConcat:
+					# print(word)
 
 
 
