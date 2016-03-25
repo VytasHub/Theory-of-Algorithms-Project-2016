@@ -8,8 +8,7 @@
 
 
 
-import random as rn
-import hashlib
+
 
 
 mapDctionary = dict()
@@ -20,67 +19,42 @@ angramWords = []
 
 with open("wordlist.txt") as f:
 	#dictionary = f.readlines()
-	dictionary = [line.strip() for line in f]# Brackets , its list comprahension 
+	dictionary = [line.strip() for line in f]# Brackets , its list comprahension
 f.close()
 
 
 #http://stackoverflow.com/questions/1024847/add-key-to-a-dictionary-in-python
-count = 0
+
+#http://stackoverflow.com/questions/3944876/casting-an-int-to-a-string-in-python
+
+#key value
 for word in dictionary:
-	count += 1
-	mapDctionary.update({word:count})
+	mapDctionary.update({word:sum(ord(ch) for ch in word)})
+#http://stackoverflow.com/questions/25783460/python-changing-string-values-in-lists-into-ascii-values
 	
-	
+
 #print(mapDctionary)
 
+#http://stackoverflow.com/questions/8023306/get-key-by-value-in-dictionary
 for word, count in mapDctionary.items():
-    if count == 16:
+    if count == 956:
         print(word)
 
-
-#print(dictionary[2])
-#print(hashlib.algorithms_available)
-
-#hash_object = hashlib.md5(b'Hello World')
-#print(hash_object.hexdigest())
-
-#for x in dictionary:   
-	#x = x.strip()
-	#words.append(x)
-  
-  
-# gopup
-
-#Go Pup
-#Pug Op
-  
-def anagrams(letters):
-  if len(letters) <=1:
-    return letters
-  else:
-    anagramlist = []
-    for anagram in anagrams(letters[1:]):
-      for i in range(len(letters)):
-        anagramlist.append(anagram[:i] + letters[0:1] + anagram[i:])
-    return anagramlist
-
-word = "auctieond"
-#auctioned
-i = 0
-
-#print("The anagrams of %s are:" % word)
-
-
-
-
-angramWords = anagrams(word)
-#print(angramWords)
+		
+#956 auctioned ,education
 
 
 
 
 
-def checker():
+
+
+
+
+
+
+
+#def checker():
 	for angram in angramWords:
 		if angram in dictionary:
 			if len (angram) > 8:
@@ -100,13 +74,8 @@ def checker():
 				
 				
 				
-checker()
-#for anagram in angramWords:
-	#print("Outer " + anagram)
-	#for word in dictionary:
-		#print("Dictionary " + word)
-		#if anagram == word:
-			#print("Inner " + word)
+#checker()
+
 	
 			
 print("Over")
