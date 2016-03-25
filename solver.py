@@ -4,11 +4,15 @@
 
 # use a set to get rid of duplicates
 # generating random word use ASCI range values
+# use md5  encryption
 
 
 
 import random as rn
 import hashlib
+
+
+mapDctionary = dict()
 
 dictionary = []
 angramWords = []
@@ -17,8 +21,22 @@ angramWords = []
 with open("wordlist.txt") as f:
 	#dictionary = f.readlines()
 	dictionary = [line.strip() for line in f]# Brackets , its list comprahension 
+f.close()
+
+
+#http://stackoverflow.com/questions/1024847/add-key-to-a-dictionary-in-python
+count = 0
+for word in dictionary:
+	count += 1
+	mapDctionary.update({word:count})
 	
 	
+#print(mapDctionary)
+
+for word, count in mapDctionary.items():
+    if count == 16:
+        print(word)
+
 
 #print(dictionary[2])
 #print(hashlib.algorithms_available)
