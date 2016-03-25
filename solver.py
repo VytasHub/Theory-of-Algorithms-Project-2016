@@ -12,9 +12,9 @@
 
 
 mapDctionary = dict()
-
-dictionary = []
-angramWords = []
+mapFilter = dict()
+asciiValueInt = 0
+asciiValueConcat = 0
 
 
 with open("wordlist.txt") as f:
@@ -33,16 +33,42 @@ for word in dictionary:
 #http://stackoverflow.com/questions/25783460/python-changing-string-values-in-lists-into-ascii-values
 	
 
-#print(mapDctionary)
+def proccesWord():
+	word = "auctioned"
+	asciiValueInt = (sum(ord(ch) for ch in word))
+	sortword = sorted(word)
+	asciiConcat = [str(ord(ch)) for ch in sortword]
+	asciiValueConcat = "".join(asciiConcat)
+	
+	return asciiValueInt,int(asciiValueConcat)
+	
+asciiValueInt, asciiValueConcat = proccesWord()
+
+print(asciiValueInt)
+print(asciiValueConcat)
+
+
 
 #http://stackoverflow.com/questions/8023306/get-key-by-value-in-dictionary
-for word, count in mapDctionary.items():
-    if count == 956:
-        print(word)
 
+def	checAnagrams():	
+	for word, count in mapDctionary.items():
+		if count == asciiValueInt:
+			sortword = sorted(word)
+			ascii = [str(ord(ch)) for ch in sortword] 
+			asciiJoined = "".join(ascii)
+			mapFilter.update({word:int(asciiJoined)})
+			for word, count in mapFilter.items():
+				if count == asciiValueConcat:
+					print(word)
+			
+			
+		#sortword = sorted(word)
+checAnagrams()
 		
 #956 auctioned ,education
 
+#print("Over")
 
 
 
@@ -52,33 +78,30 @@ for word, count in mapDctionary.items():
 
 
 
-
-
-#def checker():
-	for angram in angramWords:
-		if angram in dictionary:
-			if len (angram) > 8:
-				print(angram)
-			elif len (angram) > 7:
-				print(angram)
-			elif len (angram) > 6:
-				print(angram)
-			elif len (angram) > 5:
-				print(angram)
-			elif len (angram) > 4:
-				print(angram)
-			elif len (angram) > 3:
-				print(angram)
-			elif len (angram) > 2:
-				print(angram)
+# Comment out blok of code select ctrl + Q
+# def checker():
+	# for angram in angramWords:
+		# if angram in dictionary:
+			# if len (angram) > 8:
+				# print(angram)
+			# elif len (angram) > 7:
+				# print(angram)
+			# elif len (angram) > 6:
+				# print(angram)
+			# elif len (angram) > 5:
+				# print(angram)
+			# elif len (angram) > 4:
+				# print(angram)
+			# elif len (angram) > 3:
+				# print(angram)
+			# elif len (angram) > 2:
+				# print(angram)
 				
 				
 				
-#checker()
+
 
 	
-			
-print("Over")
 
 #print(angramWords[2])
 #print(dictionary[2])
