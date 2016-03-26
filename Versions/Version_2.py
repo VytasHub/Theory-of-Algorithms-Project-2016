@@ -6,12 +6,10 @@
 # generating random word use ASCI range values
 # use md5  encryption
 import time
-import hashlib
 
-mystring = "Preprocessing..."
-# Assumes the default UTF-8
-hash_object = hashlib.md5(mystring.encode())
-print(hash_object.hexdigest())
+
+
+
 
 
 mapDctionary = dict()
@@ -23,7 +21,7 @@ finalResult = []
 
 startPreProcces = time.time()
 print("Preprocessing...")
-with open("bigDictionary.txt") as f:
+with open("wordlist.txt") as f:
 	#dictionary = f.readlines()
 	dictionary = [line.strip() for line in f]# Brackets , its list comprahension
 f.close()
@@ -35,12 +33,7 @@ f.close()
 
 #key value
 for word in dictionary:
-
-	ascii = str(sum(ord(ch) for ch in word))
-	hash_object = hashlib.md5(ascii.encode())
-	mapDctionary.update({word:hash_object.hexdigest()})
-	
-#print(mapDctionary)
+	mapDctionary.update({word:sum(ord(ch) for ch in word)})
 	
 endPreProcces = time.time()
 print(endPreProcces - startPreProcces)
@@ -50,14 +43,12 @@ print("Preprocessing Done")
 startAngram = time.time()
 def proccesWord():
 	word = "auctinoed"
-	ascii = str(sum(ord(ch) for ch in word))
-	hash_object = hashlib.md5(ascii.encode())
-	hash_object.hexdigest()
+	asciiValueInt = (sum(ord(ch) for ch in word))
 	sortword = sorted(word)
 	asciiConcat = [str(ord(ch)) for ch in sortword]
 	asciiValueConcat = "".join(asciiConcat)
 	
-	return hash_object.hexdigest(),int(asciiValueConcat)
+	return asciiValueInt,int(asciiValueConcat)
 	
 asciiValueInt, asciiValueConcat = proccesWord()
 
@@ -69,21 +60,17 @@ print(asciiValueConcat)
 #http://stackoverflow.com/questions/8023306/get-key-by-value-in-dictionary
 
 def	checAnagrams():	
-	for word,count in mapDctionary.items():
-		
+	for word, count in mapDctionary.items():
 		if count == asciiValueInt:
-			
 			sortword = sorted(word)
 			ascii = [str(ord(ch)) for ch in sortword] 
 			asciiJoined = "".join(ascii)
 			mapFilter.update({word:int(asciiJoined)})
 	return mapFilter
-
-
+	
 	
 mapFilter = checAnagrams()
-
-	
+print(mapFilter)	
 
 def	checAnagrams():	
 	for word, count in mapFilter.items():
@@ -96,8 +83,62 @@ print(endAngram - startAngram )
 
 
 
+				
+		#sortword = sorted(word)
+
+		
+#956 auctioned ,education
+
+#print("Over")
+
+
+# for word, count in mapFilter.items():
+				# if count == asciiValueConcat:
+					# print(word)
+
+
+
 
 
 
 # Comment out blok of code select ctrl + Q
+# def checker():
+	# for angram in angramWords:
+		# if angram in dictionary:
+			# if len (angram) > 8:
+				# print(angram)
+			# elif len (angram) > 7:
+				# print(angram)
+			# elif len (angram) > 6:
+				# print(angram)
+			# elif len (angram) > 5:
+				# print(angram)
+			# elif len (angram) > 4:
+				# print(angram)
+			# elif len (angram) > 3:
+				# print(angram)
+			# elif len (angram) > 2:
+				# print(angram)
+				
+				
+				
 
+
+	
+
+#print(angramWords[2])
+#print(dictionary[2])
+
+
+
+
+
+
+  
+
+
+# This function is just a wrapper that shows how my script works.
+# It does the preprocessing, then creates a random list of letters, and finally runs the solver.
+
+
+#Add words from txt to to a list , than order them by lenght 
