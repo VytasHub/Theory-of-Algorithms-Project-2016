@@ -24,7 +24,7 @@ print("Dictionary loaded...")
 word = "auctioned"
         
 #http://stackoverflow.com/questions/23159200/how-to-get-every-single-permutation-of-a-string
-allPermu = ([''.join(p) for i in range(1, len(word)+1) for p in permutations(word, i)])
+allPermu = ([''.join(w) for i in range(1, len(word)+1) for w in permutations(word, i)])
 #perms = [''.join(p) for p in permutations(word)]
 
 #http://stackoverflow.com/questions/53513/best-way-to-check-if-a-list-is-empty
@@ -57,7 +57,7 @@ checker()
 def printer(num,checker): 
 	if checker == 1:
 		exit(0)
-	for word in result:
+	for word in set(result):
 		if len (word) == num:
 			print(word)
 			checker = 1
