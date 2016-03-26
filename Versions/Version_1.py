@@ -9,6 +9,9 @@ import string
 
 result = []
 
+
+
+
 with open("wordlist.txt") as f: # Opens up wordlist.txt and saves in to the dictionary list
 	dictionary = {line.strip() for line in f}#line.strip() strips of unvanted characters as /n if dont do this words wount match as they all contain /n 
 f.close()
@@ -18,34 +21,51 @@ print("Dictionary loaded...")
 
  
 
-word = "auctieond"
-
+word = "auctioned"
+        
 #http://stackoverflow.com/questions/23159200/how-to-get-every-single-permutation-of-a-string
 allPermu = ([''.join(p) for i in range(1, len(word)+1) for p in permutations(word, i)])
 #perms = [''.join(p) for p in permutations(word)]
 
-
+#http://stackoverflow.com/questions/53513/best-way-to-check-if-a-list-is-empty
 print("Checking Angrams...")
 def checker():						#Compares all Angrams agianst the dictionary
 	for angram in allPermu:
 		if angram in dictionary:
-			if len (angram) > 8:    #Tryes to find longest angram first of lenght 9 and works its way down
+			if len (angram) == 9:    #Tryes to find longest angram first of lenght 9 and works its way down
 				result.append(angram)
-			elif len (angram) > 7:
+			if len (angram) == 8:
 				result.append(angram)
-			elif len (angram) > 6:
+			if len (angram) == 7:
 				result.append(angram)
-			elif len (angram) > 5:	
+			if len (angram) == 6:	
 				result.append(angram)
-			elif len (angram) > 4:	
+			if len (angram) == 5:	
 				result.append(angram)
-			elif len (angram) > 3:	
+			if len (angram) == 4:	
 				result.append(angram)
-			elif len (angram) > 2:	
+			if len (angram) == 3:	
+				result.append(angram)
+			if len (angram) == 2:	
 				result.append(angram)
 checker()
 
-print(result)
+
+
+
+
+def printer(num,checker): 
+	if checker == 1:
+		exit(0)
+	for word in result:
+		if len (word) == num:
+			print(word)
+			checker = 1
+	return printer(num-1,checker)
+
+printer(9,0)
+	
+
 # Other way checking Angrams agains the Dictionary
 #for anagram in angramWords:
 	#print("Outer " + anagram)
