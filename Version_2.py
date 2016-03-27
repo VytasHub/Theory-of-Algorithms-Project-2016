@@ -10,9 +10,9 @@ import hashlib#Used for md5
 
 mapDctionary = dict() #De-clearing dictionary
 mapFilter = dict() #De-clearing dictionary
-asciiValueInt = 0
-asciiValueConcat = 0
-finalResult = []
+asciiValueInt = 0 #declaring int
+asciiValueConcat = 0 #declaring int
+finalResult = [] #De-clearing list
 
 
 print("Preprocessing...")
@@ -63,10 +63,17 @@ mapFilter = checAnagrams()#Brings back the map
 
 def	checAnagrams():	# Filter unwanted words out
 	for word, count in mapFilter.items():#Loops throw the maps
-		if count == asciiValueConcat:#We asciiValueConcat to find our anagrams
+		if count == asciiValueConcat:#We use asciiValueConcat to find our anagrams
 			print(word)#Print them if they match
 	
-checAnagrams()
+checAnagrams()#Calls Function
+
+
+
+
+
+
+
 
 
 

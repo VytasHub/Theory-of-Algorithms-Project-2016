@@ -1,7 +1,7 @@
 # Vytas Vaiciulis
 # G00304571
 # Date
-
+import timeit
 
 
 mapDctionary = dict() #De-clearing dictionary
@@ -55,6 +55,9 @@ def	checAnagrams():		# Filter unwanted words out
 			print(word)#Print them if they match
 	
 checAnagrams()#Calls Function
+
+
+
 
 
 
