@@ -124,4 +124,18 @@ As we can see all scripts run reasonably fast and all of the main work is done l
 [1]: http://www.oxfordlearnersdictionaries.com/wordlist/english/oxford3000/
 [2]: http://stackoverflow.com/questions/1024847/add-key-to-a-dictionary-in-python
 [3]: http://stackoverflow.com/questions/3944876/casting-an-int-to-a-string-in-python
-[3]:
+[4]: http://stackoverflow.com/questions/25783460/python-changing-string-values-in-lists-into-ascii-values
+[5]: http://stackoverflow.com/questions/8023306/get-key-by-value-in-dictionary
+[6]: http://stackoverflow.com/questions/53513/best-way-to-check-if-a-list-is-empty
+[7]: http://stackoverflow.com/questions/23159200/how-to-get-every-single-permutation-of-a-string
+
+[8]: http://pythoncentral.io/hashing-strings-with-python/
+[9]: https://docs.python.org/2/library/sets.html
+
+
+
+
+
+
+
+
