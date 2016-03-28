@@ -40,6 +40,7 @@ asciiValueConcat = "".join(asciiConcat)
 ```
 
 Now we can run function checAnagrams() that finds anagrams so we will use asciiValueInt to look all words that contain same value which will find all the angrams but some anomolys will appear as some letter combination may give same ASCCi value so we will need some cleaning up to do.If we were to use word shuffled up version of word auctioned the angrams ofauctioned are (auctioned,education) this what we would get:
+
 ![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/anomolys.png)
 
 
