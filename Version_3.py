@@ -33,8 +33,8 @@ print("Dictionary Loaded in:")
 print(dictionary_time)
 	
 def proccesWord():
-	
 	word = "autcinoed"
+	print("Generated word:"+word)
 	print("Word:"+ word)
 	ascii = str(sum(ord(ch) for ch in word)) #Get total ascii value of a string cast is as str
 	hash_object = hashlib.md5(ascii.encode())#Get the hash-code of string so we can run it against the map

@@ -11,7 +11,7 @@ asciiValueConcat = 0 #declaring int
 finalResult = [] #De-clearing list
 #bigDictionary
 dictionary_start = time.time()
-with open("wordlist.txt") as f:#Read in bigDictiobary
+with open("bigDictionary.txt") as f:#Read in bigDictiobary
 	dictionary = [line.strip() for line in f]# Brackets , its list comprahension
 f.close()#Close the file
 
@@ -24,11 +24,11 @@ dictionary_end = time.time()
 dictionary_time = (dictionary_end - dictionary_start)
 print("Dictionary Loaded in:")
 print(dictionary_time)
-print(mapDctionary)
+
 	
 def proccesWord():
 	word = "auctinoed"
-	print("Word:"+ word)
+	print("Generated word:"+word)
 	asciiValueInt = (sum(ord(ch) for ch in word))#Get total ascii value of a string cast is as str
 	sortword = sorted(word)#Sorts word
 	asciiConcat = [str(ord(ch)) for ch in sortword]#Get ascii value of each char in string
@@ -46,7 +46,6 @@ def	checAnagrams():
 			sortword = sorted(word)# Sort word if match is found
 			ascii = [str(ord(ch)) for ch in sortword] #Get ascii value of each char in string
 			asciiJoined = "".join(ascii)#joins the together
-			print(word)
 			mapFilter.update({word:int(asciiJoined)})#Populates mini map to be filtered
 	return mapFilter
 	
