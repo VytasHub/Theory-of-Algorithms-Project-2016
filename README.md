@@ -26,12 +26,10 @@ for angram in allPermu:
 ```
 This was my first attempt to crack the problem so I didn’t go to deep the other 2 attempts I got way more in depth into the problem and how to solve it.
 ## Python script Version_2
-![alt text](https://github.com/RonanC/Countdown-Letters-Game-Solver/blob/master/resources/v2-standby-top.png "v2-standby-top")
-![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/ascii.png "ascii")
+
+So first thing that happens is dictionary is read in from bigDictionary.txt
+Than it stored in map.It stores word as key and the value is all character asci values added up together as follows: if word is abc than its key will be 97+98+99 = 294
 ![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/ascii.png)
-
-
-
 ```python
 mapDctionary.update({word:sum(ord(ch) for ch in word)})
 ```
