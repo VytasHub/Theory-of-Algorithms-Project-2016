@@ -109,23 +109,13 @@ Here can see the preformace of the programs using wordslist.txt which contains 1
 #### Version_3
 ![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/Version_3s.png)
 
-## References
-[1]: http://www.oxfordlearnersdictionaries.com/wordlist/english/oxford3000/
-[2]: http://stackoverflow.com/questions/1024847/add-key-to-a-dictionary-in-python/
-[3]: http://stackoverflow.com/questions/3944876/casting-an-int-to-a-string-in-python/
-[4]: http://stackoverflow.com/questions/25783460/python-changing-string-values-in-lists-into-ascii-values/
-[5]: http://stackoverflow.com/questions/8023306/get-key-by-value-in-dictionary/
-[6]: http://stackoverflow.com/questions/53513/best-way-to-check-if-a-list-is-empty/
-[7]: http://stackoverflow.com/questions/23159200/how-to-get-every-single-permutation-of-a-string/
-[8]: http://pythoncentral.io/hashing-strings-with-python/
-[9]: https://docs.python.org/2/library/sets.html/
-
-
 ## Results
 My script runs very quickly, and certainly within the 30 seconds allowed in the Coutdown letters game.
 As we can see all scripts run reasonably fast and all of the main work is done loading the dictionary, very big improvement is made when using maps maping key value pairs. In my Version_2 I used ASCII value as key to find the word and it was very fast using wordslist.txt it took 0.0019 which is 2 milliseconds and using hexdigest md5 it to a little bit more 0.003.
 
-
+## References
+[1]: http://www.oxfordlearnersdictionaries.com/wordlist/english/oxford3000/
+[2]: http://stackoverflow.com/questions/1024847/add-key-to-a-dictionary-in-python/
 
 
 
