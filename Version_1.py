@@ -4,6 +4,7 @@
 from itertools import permutations
 import random
 import string
+import time
 
 result = []
 
@@ -18,8 +19,6 @@ randomConsonants = ''.join(consonants.pop() for i in range(4))#Pops one of the l
 randomChar = ''.join(random.choice(string.ascii_lowercase) for i in range(2))#Generates one random char
 
 randomWord = randomVowels + randomConsonants + randomChar#Adds word together
-
-
 
 
 def readIn():
@@ -71,14 +70,26 @@ def printer(num,checker): #This recursive function prints all words of length 9 
 	return printer(num-1,checker)#Recursive call
 
 	
-
-
+dictionary_start = time.time()
 dictionary = readIn()
-print("Dictionary Loaded...")
-print("Generated random word:"+ randomWord)
-allPermu = getPermutations()
+dictionary_end = time.time()
+dictionary_time = (dictionary_end - dictionary_start)
+print("Dictionary Loaded in:")
+print(dictionary_time)
 
+
+print("Generated random word:"+ randomWord)
+
+look_start = time.time()
+
+allPermu = getPermutations()
 checker()
+
+look_end = time.time()
+look_time = (look_end - look_start)
+print("Time to find Permutation:")
+print(look_time)
+
 print("Permutations Listed:")
 printer(9,0)
 
