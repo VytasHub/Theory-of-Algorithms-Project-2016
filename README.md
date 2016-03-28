@@ -65,7 +65,7 @@ After this method we get our result 2 anagrams: auctioned, education
 ## Python script Version_3
 This version is identical to Version_2 the only thing that’s different I am using md5 algorithm to hexdigest the ASCII value and stored as hash to see would it improve performance which show in performance section.
 
-# Version_3
+#### Version_3
 ```python
 for word in dictionary:
 	ascii = str(sum(ord(ch) for ch in word)) 
@@ -80,7 +80,7 @@ def proccesWord():
 	hash_object = hashlib.md5(ascii.encode())
 	hash_object.hexdigest()
 ```
-# Version_2
+#### Version_2
 ```python
 for word in dictionary:
 	mapDctionary.update({word:sum(ord(ch) for ch in word)})
@@ -91,13 +91,7 @@ def proccesWord():
 	asciiValueInt = (sum(ord(ch) for ch in word))
 ```
 
-Previously it looks like this:
-```python
-# Note that the following snippet of code was adapted from
-# the Stack Overflow post available here: http://www.so.com/post/123
-import nothing
-```
-That didn't work too well, so I changed it.
+
 
 ## Preprocessing
 My script does a lot of preprocessing, which only needs to be run once.
