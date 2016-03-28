@@ -14,16 +14,35 @@ Google gave me two relevant results on the first page, these are [Cool Project n
 
 ## Words list
 My words list is in the file [wordslist.txt](wordslist.txt) in this repoistory/gist.
-I got my words list from the [Oxford Learner's Dictionaries][1] website.
+I got my words list from the [Oxford Learner's Dictionaries][1] website it contains 10 000 words also got the [bigDictionary.txt](bigDictionary.txt) it contains 235 886 words.
 
-## Python script
-My script is in the files [solver.py](solver.py) in this repository and it works as follows.
-The most important section is:
-![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/ascii.png "ascii")
+## Python script Version_1
+My Version_1 uses from itertools import permutations. First it reads in bigDictionary.txt and strip of unwanted characters readIn(). Than gets all permutation of a give words it’s a 9 letter word so there will be 362880 getPermutations().Afther that it compares all permutations 362 880 against the bigDictionary.txt which contains 235 886.So the amount of checking up to do is mind blowing          85 598 311 680.Once that is done the result is ran throw printer() which is recursive function that only prints out the highest  word permutation.
+This most important part as it uses contains so it finds all the sub permutations too.
 
 ```python
-import random
-print(random.shuffle("My code is cool."))
+for angram in allPermu:
+		if angram in dictionary:
+```
+This was my first attempt to crack the problem so I didn’t go to deep the other 2 attempts I got way more in depth into the problem and how to solve it.
+## Python script Version_2
+![alt text](https://github.com/RonanC/Countdown-Letters-Game-Solver/blob/master/resources/v2-standby-top.png "v2-standby-top")
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/ascii.png "ascii")
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/ascii.png)
+
+
+
+```python
+mapDctionary.update({word:sum(ord(ch) for ch in word)})
+```
+
+## Python script Version_3
+My Version_1 uses from itertools import permutations. First it reads in bigDictionary.txt and strip of unwanted characters readIn(). Than gets all permutation of a give words it’s a 9 letter word so there will be 362880 getPermutations().Afther that it compares all permutations 362 880 against the bigDictionary.txt which contains 235 886.So the amount of checking up to do is mind blowing          85 598 311 680.Once that is done the result is ran throw printer() which is recursive function that only prints out the highest  word permutation.
+This most important part as it uses contains so it finds all the sub permutations too.
+
+```python
+for angram in allPermu:
+		if angram in dictionary:
 ```
 
 Previously it looks like this:
