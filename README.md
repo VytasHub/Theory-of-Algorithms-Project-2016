@@ -63,12 +63,32 @@ def	checAnagrams():
 After this method we get our result 2 anagrams: auctioned, education
 
 ## Python script Version_3
-My Version_1 uses from itertools import permutations. First it reads in bigDictionary.txt and strip of unwanted characters readIn(). Than gets all permutation of a give words it’s a 9 letter word so there will be 362880 getPermutations().Afther that it compares all permutations 362 880 against the bigDictionary.txt which contains 235 886.So the amount of checking up to do is mind blowing          85 598 311 680.Once that is done the result is ran throw printer() which is recursive function that only prints out the highest  word permutation.
-This most important part as it uses contains so it finds all the sub permutations too.
+This version is identical to Version_2 the only thing that’s different I am using md5 algorithm to hexdigest the ASCII value and stored as hash to see would it improve performance which show in performance section.
 
+# Version_3
 ```python
-for angram in allPermu:
-		if angram in dictionary:
+for word in dictionary:
+	ascii = str(sum(ord(ch) for ch in word)) 
+	hash_object = hashlib.md5(ascii.encode())
+	mapDctionary.update({word:hash_object.hexdigest()})
+```
+```python
+def proccesWord():
+	word = "autcinoed"
+	print("Word:"+ word)
+	ascii = str(sum(ord(ch) for ch in word)) 
+	hash_object = hashlib.md5(ascii.encode())
+	hash_object.hexdigest()
+```
+# Version_2
+```python
+for word in dictionary:
+	mapDctionary.update({word:sum(ord(ch) for ch in word)})
+```
+```python
+def proccesWord():
+	word = "auctinoed"
+	asciiValueInt = (sum(ord(ch) for ch in word))
 ```
 
 Previously it looks like this:
