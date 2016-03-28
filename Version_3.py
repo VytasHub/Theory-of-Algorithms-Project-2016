@@ -1,7 +1,7 @@
 # Vytas Vaiciulis
 # G00304571
 # Date
-import timeit
+import time
 
 
 mapDctionary = dict() #De-clearing dictionary
@@ -10,8 +10,7 @@ asciiValueInt = 0 #declaring int
 asciiValueConcat = 0 #declaring int
 finalResult = [] #De-clearing list
 
-
-print("Preprocessing...")
+dictionary_start = time.time()
 with open("wordlist.txt") as f:#Read in bigDictiobary
 	dictionary = [line.strip() for line in f]# Brackets , its list comprahension
 f.close()#Close the file
@@ -21,7 +20,10 @@ f.close()#Close the file
 
 for word in dictionary:
 	mapDctionary.update({word:sum(ord(ch) for ch in word)})#Get total ascii value of all chars in the string and populates the map
-
+dictionary_end = time.time()
+dictionary_time = (dictionary_end - dictionary_start)
+print("Dictionary Loaded in:")
+print(dictionary_time)
 	
 def proccesWord():
 	word = "auctinoed"
@@ -46,7 +48,7 @@ def	checAnagrams():
 			mapFilter.update({word:int(asciiJoined)})#Populates mini map to be filtered
 	return mapFilter
 	
-	
+look_start = time.time()
 mapFilter = checAnagrams()#Brings back the map
 	
 
@@ -56,10 +58,13 @@ def	checAnagrams():		# Filter unwanted words out
 			print(word)#Print them if they match
 
 
-print("Dictionary Loaded...")
-
-print("Permutations Listed:")			
+print("Permutations Listed:")
 checAnagrams()#Calls Function
+look_end = time.time()
+look_time = (look_end - look_start)
+print("Time to find Permutations:")
+print(look_time)
+
 
 
 

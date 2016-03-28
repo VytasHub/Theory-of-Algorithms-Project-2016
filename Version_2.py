@@ -15,7 +15,7 @@ asciiValueConcat = 0 #declaring int
 finalResult = [] #De-clearing list
 
 
-
+dictionary_start = time.time()
 with open("bigDictionary.txt") as f:#Read in bigDictiobary
 	dictionary = [line.strip() for line in f]# Brackets , its list comprehension
 f.close()#Close the file
@@ -27,7 +27,10 @@ for word in dictionary:
 	hash_object = hashlib.md5(ascii.encode())#Used total ascii value to hash md5 hash to uniquely identify a string
 	mapDctionary.update({word:hash_object.hexdigest()})#Populates map with word and related hash
 	#Note could not use Key as hash as there are same hashes and keys seam to be need to be unique
-
+dictionary_end = time.time()
+dictionary_time = (dictionary_end - dictionary_start)
+print("Dictionary Loaded in:")
+print(dictionary_time)
 	
 def proccesWord():
 	
@@ -59,6 +62,8 @@ def	checAnagrams():
 
 
 	
+
+look_start = time.time()	
 mapFilter = checAnagrams()#Brings back the map
 
 	
@@ -68,11 +73,14 @@ def	checAnagrams():	# Filter unwanted words out
 		if count == asciiValueConcat:#We use asciiValueConcat to find our anagrams
 			print(word)#Print them if they match
 
-print("Dictionary Loaded...")
+
 
 print("Permutations Listed:")
 checAnagrams()#Calls Function
-
+look_end = time.time()
+look_time = (look_end - look_start)
+print("Time to find Permutations:")
+print(look_time)
 
 
 
