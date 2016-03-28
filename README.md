@@ -97,7 +97,23 @@ def proccesWord():
 Pre-processing is very important as it creates map with keys which can be looked up instantly. Pre-processing needs to be run once to map dictionary to the map. Pre-processing running time will depend on dictionary size. As we will see in Performance section as 2 dictionaries are used : wordslist.txt 10000 words and  bigDictionary.txt it contains 235 886 words.
 
 ## Efficiency
-Here's some stuff about how efficient my code is, including an analysis of how many calculations my algorithm requires.
+We can see the preformace of the programs using bigDictionary.txt which contains 235 886 words.
+
+#### Version_1
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/Version_1b.png)
+#### Version_2
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/Version_2b.png)
+#### Version_3
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/Version_3b.png)
+
+Here can see the preformace of the programs using wordslist.txt which contains 10 000 words.
+
+#### Version_1
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/output.png)
+#### Version_2
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/output.png)
+#### Version_3
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/output.png)
 
 ## Results
 My script runs very quickly, and certainly within the 30 seconds allowed in the Coutdown letters game.
