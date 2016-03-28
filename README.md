@@ -33,6 +33,14 @@ Than it stored in map.It stores word as key and the value is all character asci 
 ```python
 mapDctionary.update({word:sum(ord(ch) for ch in word)})
 ```
+Than we run method proccesWord() that first finds the total ASCII value and stores it in asciiValueInt as shown above for the dictionary words .And it also concatinates all the ASCCI values and stores that in asciiConcat variable.so as example words abc would have 979899 asciiConcat.The asciiValueInt and asciiConcat  will be used  to find word in the map.
+```python
+asciiConcat = [str(ord(ch)) for ch in sortword]
+asciiValueConcat = "".join(asciiConcat)
+```
+
+
+
 
 ## Python script Version_3
 My Version_1 uses from itertools import permutations. First it reads in bigDictionary.txt and strip of unwanted characters readIn(). Than gets all permutation of a give words it’s a 9 letter word so there will be 362880 getPermutations().Afther that it compares all permutations 362 880 against the bigDictionary.txt which contains 235 886.So the amount of checking up to do is mind blowing          85 598 311 680.Once that is done the result is ran throw printer() which is recursive function that only prints out the highest  word permutation.
