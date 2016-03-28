@@ -94,8 +94,7 @@ def proccesWord():
 
 
 ## Preprocessing
-My script does a lot of preprocessing, which only needs to be run once.
-Once the preprocessing is done we can run the game solver again and again without that overhead.
+Pre-processing is very important as it creates map with keys which can be looked up instantly. Pre-processing needs to be run once to map dictionary to the map. Pre-processing running time will depend on dictionary size. As we will see in Performance section as 2 dictionaries are used : wordslist.txt 10000 words and  bigDictionary.txt it contains 235 886 words.
 
 ## Efficiency
 Here's some stuff about how efficient my code is, including an analysis of how many calculations my algorithm requires.
