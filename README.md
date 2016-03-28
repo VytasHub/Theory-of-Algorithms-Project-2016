@@ -19,6 +19,7 @@ I got my words list from the [Oxford Learner's Dictionaries][1] website.
 ## Python script
 My script is in the files [solver.py](solver.py) in this repository and it works as follows.
 The most important section is:
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/ascii.png "ascii")
 
 ```python
 import random
