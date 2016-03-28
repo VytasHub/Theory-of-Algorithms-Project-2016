@@ -9,9 +9,9 @@ mapFilter = dict() #De-clearing dictionary
 asciiValueInt = 0 #declaring int
 asciiValueConcat = 0 #declaring int
 finalResult = [] #De-clearing list
-
+#bigDictionary
 dictionary_start = time.time()
-with open("bigDictionary.txt") as f:#Read in bigDictiobary
+with open("wordlist.txt") as f:#Read in bigDictiobary
 	dictionary = [line.strip() for line in f]# Brackets , its list comprahension
 f.close()#Close the file
 
@@ -46,12 +46,13 @@ def	checAnagrams():
 			sortword = sorted(word)# Sort word if match is found
 			ascii = [str(ord(ch)) for ch in sortword] #Get ascii value of each char in string
 			asciiJoined = "".join(ascii)#joins the together
+			print(word)
 			mapFilter.update({word:int(asciiJoined)})#Populates mini map to be filtered
 	return mapFilter
 	
 look_start = time.time()
 mapFilter = checAnagrams()#Brings back the map
-	
+
 
 def	checAnagrams():		# Filter unwanted words out
 	for word, count in mapFilter.items():#Loops throw the maps
