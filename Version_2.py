@@ -15,7 +15,7 @@ asciiValueConcat = 0 #declaring int
 finalResult = [] #De-clearing list
 
 
-print("Preprocessing...")
+
 with open("bigDictionary.txt") as f:#Read in bigDictiobary
 	dictionary = [line.strip() for line in f]# Brackets , its list comprehension
 f.close()#Close the file
@@ -30,7 +30,9 @@ for word in dictionary:
 
 	
 def proccesWord():
-	word = "auctinoed"
+	
+	word = "autcinoed"
+	print("Word:"+ word)
 	ascii = str(sum(ord(ch) for ch in word)) #Get total ascii value of a string cast is as str
 	hash_object = hashlib.md5(ascii.encode())#Get the hash-code of string so we can run it against the map
 	hash_object.hexdigest()#Does the hash
@@ -65,7 +67,10 @@ def	checAnagrams():	# Filter unwanted words out
 	for word, count in mapFilter.items():#Loops throw the maps
 		if count == asciiValueConcat:#We use asciiValueConcat to find our anagrams
 			print(word)#Print them if they match
-	
+
+print("Dictionary Loaded...")
+
+print("Permutations Listed:")
 checAnagrams()#Calls Function
 
 

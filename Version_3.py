@@ -25,6 +25,7 @@ for word in dictionary:
 	
 def proccesWord():
 	word = "auctinoed"
+	print("Word:"+ word)
 	asciiValueInt = (sum(ord(ch) for ch in word))#Get total ascii value of a string cast is as str
 	sortword = sorted(word)#Sorts word
 	asciiConcat = [str(ord(ch)) for ch in sortword]#Get ascii value of each char in string
@@ -53,7 +54,11 @@ def	checAnagrams():		# Filter unwanted words out
 	for word, count in mapFilter.items():#Loops throw the maps
 		if count == asciiValueConcat:#We use asciiValueConcat to find our anagrams
 			print(word)#Print them if they match
-	
+
+
+print("Dictionary Loaded...")
+
+print("Permutations Listed:")			
 checAnagrams()#Calls Function
 
 
