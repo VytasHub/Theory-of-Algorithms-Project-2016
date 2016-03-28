@@ -39,13 +39,28 @@ asciiConcat = [str(ord(ch)) for ch in sortword]
 asciiValueConcat = "".join(asciiConcat)
 ```
 
-Now we can run function checAnagrams() that finds anagrams so we will use asciiValueInt to look all words that contain same value which will find all the angrams but some anomolys will appear as some letter combination may give same ASCCi value so we will need some cleaning up to do.If we were to use word shuffled up version of word auctioned the angrams ofauctioned are (auctioned,education) this what we would get:
+Now we can run function checAnagrams() that finds anagrams so we will use asciiValueInt to look all words that contain same value which will find all the angrams but some anomolys will appear as some letter combination may give same ASCCi value so we will need some cleaning up to do.If we were to use word shuffled up version of word auctioned the angrams of auctioned are (auctioned,education) this what we would get:
 
+```python
+def	checAnagrams():	
+	for word, count in mapDctionary.items():
+		if count == asciiValueInt:)
+```
 ![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/anomolys.png)
 
+As we can see bouth of our angrams are there that match the ASCII value but when dealing with big dictionaries other words will show as well that have same ASCII value.So here is where asciiConcat value will come in we will sort all of the words in this list and get asciiConcat value of all them and only take words out of the list that match our original word asciiConcat value.
 
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/output.png)
 
+We can see that tere are 2 angrams in there that have same asciiConcat thats the ones we want and will get them runing this method:
 
+```python
+def	checAnagrams():	
+	for word, count in mapFilter.items():
+		if count == asciiValueConcat:
+			print(word)
+```
+After this method we get our result 2 anagrams: auctioned, education
 
 ## Python script Version_3
 My Version_1 uses from itertools import permutations. First it reads in bigDictionary.txt and strip of unwanted characters readIn(). Than gets all permutation of a give words it’s a 9 letter word so there will be 362880 getPermutations().Afther that it compares all permutations 362 880 against the bigDictionary.txt which contains 235 886.So the amount of checking up to do is mind blowing          85 598 311 680.Once that is done the result is ran throw printer() which is recursive function that only prints out the highest  word permutation.
