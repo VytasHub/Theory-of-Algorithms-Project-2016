@@ -109,11 +109,11 @@ We can see the preformace of the programs using bigDictionary.txt which contains
 Here can see the preformace of the programs using wordslist.txt which contains 10 000 words.
 
 #### Version_1
-![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/output.png)
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/Version_3s.png)
 #### Version_2
-![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/output.png)
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/Version_3s.png)
 #### Version_3
-![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/output.png)
+![](https://github.com/VytasHub/Theory-of-Algorithms-Project-2016/blob/master/pics/Version_3s.png)
 
 ## Results
 My script runs very quickly, and certainly within the 30 seconds allowed in the Coutdown letters game.
