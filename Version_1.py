@@ -22,7 +22,7 @@ randomWord = randomVowels + randomConsonants + randomChar#Adds word together
 
 #wordlist.txt
 def readIn():
-	with open("bigDictionary.txt") as f: # Opens up wordlist.txt and saves in to the dictionary list
+	with open("wordlist.txt") as f: # Opens up wordlist.txt and saves in to the dictionary list
 		dictionary = {line.strip() for line in f}#line.strip() strips of unwanted characters as /n if don't do this words wont match as they all contain /n 
 	f.close()
 	return dictionary	
