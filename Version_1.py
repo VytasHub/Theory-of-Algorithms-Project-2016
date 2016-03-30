@@ -97,6 +97,7 @@ printer(9,0)
 
 
 
+
 #To run script open cmd in following directory and type Version_1.py to run the script
 
 

@@ -12,7 +12,7 @@ finalResult = [] #De-clearing list
 #bigDictionary
 #wordlist
 dictionary_start = time.time()
-with open("bigDictionary.txt") as f:#Read in bigDictiobary
+with open("wordlist.txt") as f:#Read in bigDictiobary
 	dictionary = [line.strip() for line in f]# Brackets , its list comprahension
 f.close()#Close the file
 
