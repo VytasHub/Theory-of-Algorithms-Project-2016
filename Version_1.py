@@ -8,8 +8,10 @@ import time
 
 result = []
 
-vowels = ['a','o','u','e','i'] # Creates list of vowels
-consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']# Creates list consonants
+
+#According to the rules of scrabble
+vowels = ['a','a','a','a','a','a','a','a','a','e','e','e','e','e','e','e','e','e','e','e','e','i','i','i','i','i','i','i','i','i','o','o','o','o','o','o','o','o','u','u','u','u',]# Creates list of vowels
+consonants = ['b','b','c','c','d','d','d','d','f','f','g','g','g','h','j','k','l','l','l','l','m','m','n','n','n','n','n','n','p','p','q','r','r','r','r','r','r','s','s','s','s','t','t','t','t','t','t','v','v','w','w','x','y','y','z']# Creates list consonants
 
 random.shuffle(vowels,random.random)#Shuffles the list to avoid duplication
 random.shuffle(consonants,random.random)#Shuffles the list to avoid duplication

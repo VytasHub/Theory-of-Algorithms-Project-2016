@@ -1,8 +1,10 @@
 import random
 import string
 
-vowels = ['a','o','u','e','i']
-consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
+
+#According to the rules of scrabble
+vowels = ['a','a','a','a','a','a','a','a','a','e','e','e','e','e','e','e','e','e','e','e','e','i','i','i','i','i','i','i','i','i','o','o','o','o','o','o','o','o','u','u','u','u',]
+consonants = ['b','b','c','c','d','d','d','d','f','f','g','g','g','h','j','k','l','l','l','l','m','m','n','n','n','n','n','n','p','p','q','r','r','r','r','r','r','s','s','s','s','t','t','t','t','t','t','v','v','w','w','x','y','y','z']
 
 random.shuffle(vowels,random.random)
 random.shuffle(consonants,random.random)

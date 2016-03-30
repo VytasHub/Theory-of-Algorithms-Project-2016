@@ -10,8 +10,9 @@ asciiValueInt = 0 #declaring int
 asciiValueConcat = 0 #declaring int
 finalResult = [] #De-clearing list
 #bigDictionary
+#wordlist
 dictionary_start = time.time()
-with open("wordlist.txt") as f:#Read in bigDictiobary
+with open("bigDictionary.txt") as f:#Read in bigDictiobary
 	dictionary = [line.strip() for line in f]# Brackets , its list comprahension
 f.close()#Close the file
 
