@@ -1,7 +1,7 @@
 # Vytas Vaiciulis
 # G00304571
-# Date
-import time
+# 28/03/2016
+import time# To time functions
 
 
 mapDctionary = dict() #De-clearing dictionary

@@ -1,6 +1,6 @@
 # Vytas Vaiciulis
 # G00304571
-# Date
+# 28/03/2016
 from itertools import permutations
 import random
 import string

@@ -1,9 +1,9 @@
 # Vytas Vaiciulis
 # G00304571
-# Date
+# 28/03/2016
 
 
-import time
+import time# To time functions
 import hashlib#Used for md5
 
 
